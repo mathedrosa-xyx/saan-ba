@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SAAN BA?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="notch"></div>
+
+  <!-- 1. WELCOME -->
+  <section class="screen active" id="welcome">
+    <div class="logo" id="logoBig"></div>
+    <h1>SAAN BA?</h1>
+    <p class="tag">Tanong mo, sagot ko.</p>
+    <button class="btn" data-go="home">Tara, Biyahe! →</button>
+    <small class="foot">Commute guide · Pangasinan</small>
+  </section>
+
+  <!-- 2. HOME -->
+  <section class="screen" id="home">
+    <nav class="nav">
+      <button class="search" data-go="search">⌕ Saan ka pupunta?</button>
+      <button class="ico" data-go="map" title="Map">🗺</button>
+      <button class="ico" data-go="list" title="Route list">☰</button>
+    </nav>
+    <div class="scroll">
+      <div class="sec">Saved routes <span class="link" data-go="list">See all</span></div>
+      <div id="savedList"></div>
+      <div class="sec">Famous spots</div>
+      <div class="spots" id="spots"></div>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="screen" id="search">
+    <div class="top">
+      <button class="back" data-go="home">←</button>
+      <div class="field"><span>From</span><select id="fromSel"></select></div>
+      <div class="field"><span>To</span><input id="toInput" placeholder="Type a place…" autocomplete="off"></div>
+    </div>
+    <div class="scroll" id="results"></div>
+  </section>
+
+  <!-- ROUTE LIST -->
+  <section class="screen" id="list">
+    <div class="top"><button class="back" data-go="home">←</button><h2>All routes</h2></div>
+    <div class="scroll" id="allRoutes"></div>
+  </section>
+
+  <!-- 3. MAP + 4. GUIDE -->
+  <section class="screen" id="map">
+    <div id="leaflet"></div>
+    <div class="mapTop">
+      <button class="back" data-go="home">←</button>
+      <div class="hint" id="hint">Tap the map to place your destination</div>
+    </div>
+    <div class="sheet" id="sheet">
+      <div class="grab" id="grab"></div>
+      <div id="sheetBody"></div>
+    </div>
+  </section>
+
+  <div class="toast" id="toast"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

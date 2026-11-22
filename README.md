@@ -2,6 +2,15 @@
 
 Hard-coded commute guide prototype (HTML/CSS/JS).
 
+**MOBILE APP TERM 2**
+
+### Members
+- RODENAS, CHERIZE
+- BRAVO, DAVID
+- CHAVEZ, DOROTHY
+- EDROSA, GENESIS
+- PADULLO, KHALIL
+
 ## Run
 1. Open this folder in VS Code (File → Open Folder → `saan-ba`).
 2. Install the **Live Server** extension, right-click `index.html` → **Open with Live Server**.
